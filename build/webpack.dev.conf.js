@@ -38,5 +38,4 @@ Object.keys(webpackConfig.entry).forEach(function (name) {
   webpackConfig.entry[name] = ['./build/dev-client'].concat(webpackConfig.entry[name])
 })
 
-console.log(webpackConfig);
 module.exports = webpackConfig

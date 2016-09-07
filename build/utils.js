@@ -75,13 +75,9 @@ exports.getEntry = function (globPath) {
       basename = path.basename(entry, extname);
       pathname = path.normalize(path.join(dirname,  basename));
       pathDir = path.normalize(pathDir);
-      // console.log(entry)
-      // console.log(basename)
-      // console.log(pathname)
       if(pathname.startsWith(pathDir)){
           pathname = pathname.substring(pathDir.length)
       }
-      // console.log(pathname)
       entries[pathname] = [entry];
   }
   return entries;
@@ -104,7 +100,6 @@ exports.htmlLoaders = function(template, webpackEntry){
       conf.hash = true;
       conf.chunksSortMode='dependency';
     }
-    // console.log(conf)
     plugins.push(new HtmlWebpackPlugin(conf));
   });
 
