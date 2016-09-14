@@ -41,8 +41,8 @@ exports.cssLoaders = function (options) {
     css: generateLoaders(['css']),
     postcss: generateLoaders(['css']),
     less: generateLoaders(['css', 'less']),
-    sass: generateLoaders(['css?-autoprefixer', 'sass?indentedSyntax']),
-    scss: generateLoaders(['css?-autoprefixer', 'sass?outputStyle=expanded']),
+    sass: generateLoaders(['css?autoprefixer', 'sass?indentedSyntax']),
+    scss: generateLoaders(['css?autoprefixer', 'sass?outputStyle=expanded']),
     stylus: generateLoaders(['css', 'stylus']),
     styl: generateLoaders(['css', 'stylus'])
   }
