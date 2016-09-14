@@ -34,9 +34,6 @@ let webpackConfig = {
             query: {
                 presets: ['es2015','stage-2']
             }
-        // },{
-        //     test: /\.scss$/,
-        //     loader: 'style!css!postcss-loader!sass!sass-resources'
         },{
             test: /\.json$/,
             loader: 'json'
