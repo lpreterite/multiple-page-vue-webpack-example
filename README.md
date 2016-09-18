@@ -17,12 +17,16 @@ npm run build
 
 目录结构
 ```
-build/         #构建配置目录
-src/           #源代码目录
-    clients/   #入口文件
-    imports/   #js代码目录，此为js引入的root目录
-    styles/    #全局样式目录
-    templates/ #页面模板文件（建议和入口文件名字对应）
+build/                         #构建配置目录
+src/                           #源代码目录
+    clients/                   #分页文件
+    	[page_name]/           #页面目录，目录名称既是页面名称
+    		main.js            #入口文件
+    		template.html      #模板文件
+    		style.(css|scss)   #页面样式
+    		img/               #页面图片
+    imports/                   #js代码目录，此为js引入的root目录
+    styles/                    #全局样式目录
 ```
 
 ##关于bootstrap的配置

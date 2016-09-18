@@ -76,9 +76,10 @@ exports.getEntry = function (globPath) {
       pathname = path.normalize(path.join(dirname,  basename));
       pathDir = path.normalize(pathDir);
       if(pathname.startsWith(pathDir)){
-          pathname = pathname.substring(pathDir.length)
+          dirname = path.normalize(dirname).substring(pathDir.length)
       }
-      entries[pathname] = [entry];
+      dirname = dirname.replace(/[\\,\/]/, '\/');
+      entries[dirname] = [entry];
   }
   return entries;
 }
@@ -86,11 +87,13 @@ exports.getEntry = function (globPath) {
 exports.htmlLoaders = function(template, webpackEntry){
   // https://github.com/ampedandwired/html-webpack-plugin
   let pages = exports.getEntry(template),
-      plugins = []
+      plugins = [],
+      pathDir = path.normalize(template.replace(/\*\*.*$/,''));
 
   Object.keys(pages).forEach(function(pathname) {
+    let filename = path.normalize(path.dirname(pages[pathname][0])).substring(pathDir.length)
     let conf = {
-      filename: path.normalize(pages[pathname][0].replace(template.replace(/\*\*.*$/,''),'')), //生成的html存放路径，相对于path
+      filename: filename+'.html', //生成的html存放路径，相对于path
       template: pages[pathname][0], //html模板路径
       inject: false, //js插入的位置，true/'head'/'body'/false
     };
