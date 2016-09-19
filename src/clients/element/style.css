@@ -4,22 +4,22 @@
 }
 
 .icon-1{
-	background-image: url(img/1.png);
+	background-image: url("img/1.png#element");
 	width: 26px;
 	height: 29px;
 }
 .icon-2{
-	background-image: url(img/2.png);
+	background-image: url("img/2.png#element");
 	width: 26px;
 	height: 29px;
 }
 .icon-3{
-	background-image: url(img/3.png);
+	background-image: url("img/3.png#element");
 	width: 26px;
 	height: 29px;
 }
 .icon-4{
-	background-image: url(img/4.png);
+	background-image: url("img/4.png");
 	width: 26px;
 	height: 29px;
 }

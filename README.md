@@ -43,3 +43,12 @@ require('bootstrap-loader'); // 在入口文件中引入即可
 
 - [bootstrap-loader](https://github.com/shakacode/bootstrap-loader)
 - [bootstrap-scss](https://github.com/twbs/bootstrap-sass)
+
+关于雪碧图生成处理使用以下库，例子看`clients/element`目录和`http://localhost:6002/element.html`
+
+- [postcss-easysprites](https://github.com/glebmachine/postcss-easysprites)
+
+关于sass处理使用
+
+- [postcss](https://github.com/postcss/postcss)
+- [precss](https://github.com/jonathantneal/precss) or [postcss-scss](https://github.com/postcss/postcss-scss)
